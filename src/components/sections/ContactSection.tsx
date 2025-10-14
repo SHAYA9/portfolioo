@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, MapPin, MessageCircle } from 'lucide-react'; // ✅ Removed Phone
+import { Send, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 import SocialLinks from '@/components/ui/SocialLinks';
+
+type SubmitStatus = 'idle' | 'success' | 'error';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -13,12 +15,15 @@ const ContactSection = () => {
     subject: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle');
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value
     }));
@@ -28,13 +33,17 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
 
-      // Reset status after 3 seconds
       setTimeout(() => setSubmitStatus('idle'), 3000);
     }, 1000);
   };
@@ -93,7 +102,7 @@ const ContactSection = () => {
                 Let&apos;s start a conversation
               </h3>
               <p className="text-gray-300 leading-relaxed mb-8">
-                I&apos;m always open to discussing new opportunities, interesting projects, 
+                I&apos;m always open to discussing new opportunities, interesting projects,
                 or just having a chat about technology and development. Feel free to reach out!
               </p>
             </div>
@@ -216,6 +225,7 @@ const ContactSection = () => {
                 />
               </div>
 
+              {/* Submit Button */}
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
@@ -241,6 +251,26 @@ const ContactSection = () => {
                   </>
                 )}
               </motion.button>
+
+              {/* WhatsApp Contact Button */}
+              <motion.a
+                href="https://wa.me/923151137456" // Replace with your WhatsApp number
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="mt-4 w-full flex items-center justify-center space-x-2 px-8 py-4 rounded-lg font-semibold text-lg bg-green-500 hover:bg-green-600 text-white transition-all duration-300"
+              >
+                <span>Contact via WhatsApp</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20.52 3.48A11.78 11.78 0 0 0 12 0C5.37 0 .01 5.37.01 12c0 2.11.55 4.17 1.6 5.99L0 24l6.27-1.64A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.85 0-3.67-.5-5.27-1.45l-.38-.22-3.72.97.99-3.62-.25-.37A9.94 9.94 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.27-7.73c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.15-.19.3-.74.93-.91 1.12-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.19.05-.37-.02-.52-.07-.15-.64-1.54-.88-2.11-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.37s-1 1-1 2.43 1.03 2.82 1.18 3.02c.15.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.7-.7 1.94-1.37.24-.67.24-1.25.17-1.37-.07-.12-.26-.19-.55-.34z" />
+                </svg>
+              </motion.a>
             </form>
           </motion.div>
         </div>
