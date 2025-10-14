@@ -152,7 +152,7 @@ export const portfolioData: PortfolioData = {
   socialLinks: [
     {
       name: "GitHub",
-      url: "https://github.com/Shayan21345293",
+      url: "https://github.com/SHAYA9",
       icon: "github"
     },
     {
