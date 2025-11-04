@@ -66,6 +66,18 @@ export const portfolioData: PortfolioData = {
       category: "ai"
     },
     {
+      name: "Meta ads",
+      icon: "🧠",
+      level: 84,
+      category: "seo"
+    },
+    {
+      name: "Seo",
+      icon: "🧠",
+      level: 86,
+      category: "seo"
+    },
+    {
       name: "Machine Learning",
       icon: "🧠",
       level: 75,
