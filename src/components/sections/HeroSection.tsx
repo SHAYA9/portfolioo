@@ -108,7 +108,7 @@ const HeroSection = () => {
               <span>Contact Me</span>
             </motion.button>
 
-            <a href="/Shayan_Resume.pdf" download>
+            <a href="/cv.pdf" download>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
