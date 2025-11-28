@@ -162,7 +162,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       name: "Instagram",
-      url: "https://www.instagram.com/itz_shaya9/",
+      url: "https://www.instagram.com/shaya9_ali/",
       icon: "instagram"
     },
     {

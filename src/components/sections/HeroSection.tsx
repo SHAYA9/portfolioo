@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, MessageCircle } from 'lucide-react'; // Removed Download
+import { ArrowDown, MessageCircle, Download } from 'lucide-react'; // Removed Download
 import { portfolioData } from '@/data/portfolio';
 import SocialLinks from '@/components/ui/SocialLinks';
 
@@ -107,6 +107,17 @@ const HeroSection = () => {
               <MessageCircle className="w-5 h-5" />
               <span>Contact Me</span>
             </motion.button>
+
+            <a href="/Shayan_Resume.pdf" download>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center space-x-2"
+              >
+                <Download className="w-5 h-5" />
+                <span>Download CV</span>
+              </motion.button>
+            </a>
           </motion.div>
 
           {/* Social Links */}
