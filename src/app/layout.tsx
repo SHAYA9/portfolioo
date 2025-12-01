@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://shayan-port.vercel.app"), // Replace with your actual domain
-  title: "SHAYAN | XpertSphere - Full Stack Developer & AI Specialist",
+  title: "SHAYAN | Portfolio | XpertSphere - Full Stack Developer & AI Specialist",
   description: "SHAYAN | XpertSphere: Portfolio of Shayan, a full stack developer and Agentic AI specialist, creating powerful web solutions and intelligent agents.",
   openGraph: {
-    title: "SHAYAN | XpertSphere - Full Stack Developer & AI Specialist",
+    title: "SHAYAN | Portfolio | XpertSphere - Full Stack Developer & AI Specialist",
     description: "SHAYAN | XpertSphere: Portfolio of Shayan, a full stack developer and Agentic AI specialist.",
     url: "https://shayan-port.vercel.app", // Replace with your actual domain
     siteName: "Shayan's Portfolio",
