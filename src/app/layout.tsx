@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Shayan's Portfolio",
     images: [
       {
-        url: "/og-image.jpg", // Replace with a path to your OG image
+        url: "/s.png", // Replace with a path to your OG image
         width: 1200,
         height: 630,
         alt: "Shayan - Full Stack Developer & AI Specialist",
