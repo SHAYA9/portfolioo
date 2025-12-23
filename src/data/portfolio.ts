@@ -67,22 +67,49 @@ export const portfolioData: PortfolioData = {
     },
     {
       name: "Meta ads",
-      icon: "🧠",
+      icon: "📊",
       level: 84,
       category: "seo"
     },
     {
       name: "Seo",
-      icon: "🧠",
+      icon: "📈",
       level: 86,
       category: "seo"
     },
     {
       name: "Machine Learning",
       icon: "🧠",
-      level: 75,
+      level: 46,
       category: "ai"
+    },
+    {
+      name: "IT Management",
+      icon: "🖥️",
+      level: 81,
+      category: "it"
+    },
+    {
+      name: "Networking",
+      icon: "🌐",
+      level: 78,
+      category: "it"
     }
+    ,
+    {
+      name: "Windows Server",
+      icon: "🗄️",
+      level: 67,
+      category: "it"
+    }
+    ,
+    {
+      name: "Active Directory",
+      icon: "🔐",
+      level: 87,
+      category: "it"
+    }
+    ,
   ],
   projects: [
     {

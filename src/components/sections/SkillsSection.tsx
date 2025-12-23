@@ -20,6 +20,7 @@ const SkillsSection = () => {
     ai: portfolioData.skills.filter((skill: Skill) => skill.category === 'ai'),
     tools: portfolioData.skills.filter((skill: Skill) => skill.category === 'tools'),
     seo: portfolioData.skills.filter((skill: Skill) => skill.category === 'seo'),
+    it: portfolioData.skills.filter((skill: Skill) => skill.category === 'it'),
   };
 
   const categoryTitles = {
@@ -30,6 +31,7 @@ const SkillsSection = () => {
     ai: 'AI & Machine Learning',
     tools: 'Tools & Others',
     seo: 'Social Media Managment',
+    it: 'IT & Networking',
   };
 
   // ✅ Use the Skill type instead of any
